@@ -1,0 +1,13 @@
+[ {
+  "id" : "default_filter_text",
+  "name" : "default_filter_text",
+  "display_width" : null,
+  "label" : "Default filter text",
+  "required" : true,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Select Category"
+} ]

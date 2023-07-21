@@ -1,0 +1,27 @@
+<div id="hb_{{ name }}" class="hb-stories dynamic-title-image">
+  <h2 class="post-heading">{{ module.stories_title }}</h2>
+
+  <div class="story-list">
+    {% set table_id = 5743446 %}
+    {% for row in hubdb_table_rows(table_id) %}
+    <div class="story">
+      <img src="{{ row.image.url }}" />
+      <h2>{{ row.title }}</h2>
+      <div>{{ row.description }}</div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+
+
+{% require_js %}
+
+<script>
+
+  $(document).ready(function() {
+    // You can use this value in a global js script.
+    let $module2023654381761233 = '#hb_{{ name }}';
+  });
+</script>
+{% end_require_js %}

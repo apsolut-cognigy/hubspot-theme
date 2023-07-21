@@ -1,0 +1,38 @@
+
+.story-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.story {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+  flex-basis: 48%;
+  padding: 1%;
+  margin-bottom: 2%;
+  padding-bottom: 32px;
+  font-weight: 300;
+}
+
+.story h2 {
+  margin-top: 10px;
+}
+
+
+@media (max-width: 769px) {
+  .story {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-basis: 100%;
+    padding: 1%;
+    margin-bottom: 2%;
+    padding-bottom: 32px;
+    font-weight: 300;
+  }
+}

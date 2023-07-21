@@ -1,0 +1,26 @@
+<!--
+  templateType: global_partial
+  label: Page Footer
+-->
+<footer class="footer">
+  <div class="footer__container">
+    <div class="footer__row footer__row--one">
+      {# Copyright and legal notice #}
+      {% module_block module 'footer_copyright' path='@hubspot/rich_text', label='Copyright' %}
+        {% module_attribute 'html' %}
+          <div style="text-align: left;">
+            <p>
+                Legal notice:<br />
+                {{ site_settings.company_name }}<br />              <!-- Cognigy GmbH -->
+                {{ site_settings.company_street_address_1 }}<br />  <!-- Mühldorfstraße 8, 81671 Munich, Germany -->
+                {{ site_settings.company_street_address_2 }}<br />  <!-- Managing Directors: Oliver Nützel, Eva Wittka -->
+                {{ site_settings.company_city }}<br />              <!-- Registered at the Munich Regional Court HRB 191551 -->
+                {{ site_settings.company_state }}<br />             <!-- VAT-ID: DE 276 433 250 -->
+                &copy;{{ year }} {{ site_settings.company_name }}   <!-- ©20xx Regiondo GmbH -->
+            </p>
+          </div>
+        {% end_module_attribute %}
+      {% end_module_block %}
+    </div>
+  </div>
+</footer>

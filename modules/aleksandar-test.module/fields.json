@@ -1,0 +1,55 @@
+[ {
+  "id" : "headshot",
+  "name" : "headshot",
+  "display_width" : null,
+  "label" : "Headshot",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "max_width" : 300,
+    "size_type" : "auto",
+    "src" : "https://cdn2.hubspot.net/hubfs/7303166/Martech/home-library-couch.png",
+    "alt" : "home_lecture",
+    "width" : 300,
+    "max_height" : 205,
+    "height" : 205
+  }
+}, {
+  "id" : "recent_title",
+  "name" : "recent_title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Recent posts"
+}, {
+  "id" : "title",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Chief Education Officer"
+}, {
+  "id" : "description",
+  "name" : "description",
+  "display_width" : null,
+  "label" : "Description",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>"
+}
+]
