@@ -1,5 +1,6 @@
 # all files
 node_modules/
+.npmrc
 hubspot.config.yaml
 .DS_Store
 # editors

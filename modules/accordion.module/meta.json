@@ -3,7 +3,7 @@
   "master_language" : "en",
   "icon" : "../../images/module-icons/contact.svg",
   "host_template_types" : [ "PAGE" ],
-  "module_id" : 2023654323812342,
-  "label" : "Boxes: 3 Boxes",
+  "module_id" : 2023774323212842,
+  "label" : "Cognigy: Accordion",
   "is_available_for_new_content" : true
 }
