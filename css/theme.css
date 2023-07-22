@@ -66,6 +66,14 @@
 .w-full {
     width: 100%
 }
+.py-96 {
+    padding-top: 24rem;
+    padding-bottom: 24rem
+}
+.py-28 {
+    padding-top: 7rem;
+    padding-bottom: 7rem
+}
 .text-center {
     text-align: center
 }

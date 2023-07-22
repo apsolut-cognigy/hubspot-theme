@@ -4,6 +4,8 @@
     flex-wrap: wrap;
     max-width: 1146px;
     margin-inline: auto;
+    padding-top: 112px;
+    padding-bottom: 112px;
 }
 
 .cognigy-accordion .icon {
@@ -12,6 +14,7 @@
     height: 40px;
     margin-right: 10px;
     background-color: #ffffff;
+    z-index: 2;
 }
 .cognigy-accordion .accordion-group {
     position: relative;
@@ -27,7 +30,7 @@
     width: 1px;
     height: calc(100% + 40px);
     border-left: 1px dashed #9ccef7;
-    z-index: -1;
+    z-index: 0;
 }
 .cognigy-accordion .accordion-group:last-child:before {
     display: none;
@@ -64,6 +67,7 @@
     border-radius: 12px;
     overflow: hidden;
 }
+.accordion-left .accordion-media video,
 .accordion-left .accordion-media img,
 .accordion-left .accordion-media .hs-video-widget {
     position: relative;
