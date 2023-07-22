@@ -1,7 +1,7 @@
 {
   "global" : false,
   "master_language" : "en",
-  "icon" : "../../images/module-icons/contact.svg",
+  "icon" : "../../images/module-icons/blog-subscribe-icon",
   "host_template_types" : [ "PAGE" ],
   "module_id" : 2023774323212842,
   "label" : "Cognigy: Accordion",
