@@ -64,9 +64,9 @@
         },
         "load_external_fonts": true,
         "default": {
-          "color": "#00326D",
+          "color": "#0B3694",
           "fallback": "sans-serif",
-          "font": "Nunito Sans",
+          "font": "Open Sans",
           "font_set": "GOOGLE",
           "variant": "regular"
         }
@@ -85,9 +85,9 @@
           }
         },
         "default": {
-          "color": "#00326D",
+          "color": "#0B3694",
           "fallback": "sans-serif",
-          "font": "Nunito Sans",
+          "font": "Open Sans",
           "font_set": "GOOGLE",
           "variant": "800"
         }
@@ -1369,7 +1369,7 @@
                 "name": "bg_color",
                 "type": "color",
                 "default": {
-                  "color": "#00326D",
+                  "color": "#0B3694",
                   "opacity": 100
                 }
               },
@@ -1841,7 +1841,7 @@
                 "name": "color",
                 "type": "color",
                 "default": {
-                  "color": "#00326D",
+                  "color": "#0B3694",
                   "opacity": 100
                 }
               }
@@ -1953,7 +1953,7 @@
                 "name": "bg_color",
                 "type": "color",
                 "default": {
-                  "color": "#00326D",
+                  "color": "#0B3694",
                   "opacity": 100
                 }
               },
@@ -2481,7 +2481,7 @@
                 "name": "color",
                 "type": "color",
                 "default": {
-                  "color": "#00326D",
+                  "color": "#0B3694",
                   "opacity": 100
                 }
               }

@@ -3,8 +3,8 @@ html {
 }
 
 body {
-  color: #00326d;
-  font-family: 'Nunito Sans', sans-serif;
+  color: #0B3694;
+  font-family: 'Open Sans', sans-serif;
   line-height: 1.5;
   word-break: break-word;
 }
@@ -54,8 +54,8 @@ h3,
 h4,
 h5,
 h6 {
-  color: #00326d;
-  font-family: 'Nunito Sans', sans-serif;
+  color: #0B3694;
+  font-family: 'Open Sans', sans-serif;
   line-height: 1.25;
   margin: 0 0 1.5rem;
 }

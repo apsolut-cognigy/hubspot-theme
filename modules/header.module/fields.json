@@ -1,0 +1,14 @@
+[  {
+  "id" : "header",
+  "name" : "header",
+  "display_width" : null,
+  "label" : "Cognigy Header",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Tailwind Prototype"
+}
+]

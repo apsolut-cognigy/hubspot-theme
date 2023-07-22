@@ -1,0 +1,9 @@
+{
+  "global" : false,
+  "master_language" : "en",
+  "icon" : "../../images/module-icons/contact.svg",
+  "host_template_types" : [ "PAGE" ],
+  "module_id" : 20345543277123125,
+  "label" : "Cognigy: Heading",
+  "is_available_for_new_content" : true
+}

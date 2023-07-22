@@ -20,7 +20,7 @@ tr:nth-child(odd) {
 
 thead th,
 thead td {
-  background-color: #00326d;
+  background-color: #0B3694;
   border: none;
   border-bottom-width: 2px;
   color: #fff;
@@ -39,5 +39,5 @@ tbody + tbody {
 
 tfoot td {
   background-color: #fff;
-  color: #00326d;
+  color: #0B3694;
 }

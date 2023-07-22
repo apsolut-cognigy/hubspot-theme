@@ -1,0 +1,19 @@
+.cognigy-heading {
+
+}
+
+.cognigy-heading .cognigy-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 769px) {
+
+}
+
+@media only screen and (min-width: 770px) {
+
+}

@@ -1,0 +1,19 @@
+<div class="cognigy-heading {{ module.layout_background }}">
+  {% for item in module.heading %}
+  <div class="cognigy-content {{ module.layout_background }} ">
+
+        {% if module.subheading %}
+            <div class="subheading">
+                {% inline_text field="subheading" value="{{ module.subheading }}" %}
+            </div>
+        {% endif %}
+
+        {% header "heading" header_tag="{{ module.layout_typography }}", overrideable=True, value="{{ module.heading }}", label="header" %}
+
+        <div class="description">
+            {% inline_text field="description" value="{{ module.description }}" %}
+        </div>
+
+  </div>
+  {% endfor %}
+</div>

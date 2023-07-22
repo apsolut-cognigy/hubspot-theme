@@ -1,13 +1,12 @@
 <div id="hb_{{ name }}" class="hb-stories dynamic-title-image">
-  <h2 class="post-heading">{{ module.stories_title }}</h2>
 
   <div class="story-list">
-    {% set table_id = 5743446 %}
+    {% set table_id = 5088199 %}
     {% for row in hubdb_table_rows(table_id) %}
     <div class="story">
       <img src="{{ row.image.url }}" />
-      <h2>{{ row.title }}</h2>
-      <div>{{ row.description }}</div>
+      <h2>{{ row.heading }}</h2>
+      <div>{{ row.content }}</div>
     </div>
     {% endfor %}
   </div>

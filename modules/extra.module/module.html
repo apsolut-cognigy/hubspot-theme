@@ -1,0 +1,63 @@
+<div class="featured {{ module.layout_style }}">
+  {% for item in module.features %}
+  <div class="featured-item {{ item.img_options }} ">
+
+    <div class="content-text content-half">
+      {% if item.subheading %}
+       <span class="subheading">
+        {% inline_text field="subheading" value="{{ item.subheading }}" %}
+       </span>
+      {% endif %}
+
+      {% header "heading" header_tag="{{ module.layout_typography }}", overrideable=True, value="{{ item.heading }}", label="header" %}
+
+        <span class="description">
+            {% inline_text field="description" value="{{ item.description }}" %}
+        </span>
+
+        {% if item.link_field.url.href %}
+            <span class="link">
+                {# https://designers.hubspot.com/blog/url-and-link-fields-now-available-in-custom-modules #}
+                {% set href = item.link_field.url.href %}
+                {% if item.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+                {% set href = "mailto:" + href %}
+                {% endif %}
+                <a class="button" href="{{ href }}"
+                {% if item.link_field.open_in_new_tab %}target="_blank"{% endif %}
+                {% if item.link_field.no_follow %}rel="nofollow"{% endif %}
+                >
+                {{ item.link_text }}
+                </a>
+            </span>
+        {% endif %}
+
+    </div>
+
+    <div class="content-image content-half">
+        {% if item.headshot.src %}
+        {% set sizeAttrs = 'width="{{ item.headshot.width }}" height="{{ item.headshot.height }}"' %}
+
+        {% if item.headshot.size_type == 'auto' %}
+        {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+        {% elif item.headshot.size_type == 'auto_custom_max' %}
+        {% set sizeAttrs = 'width="{{ item.headshot.max_width }}" height="{{ item.headshot.max_height }}" style="max-width: 100%; height: auto;"' %}
+        {% endif %}
+
+        {% set loadingAttr = item.headshot.loading != 'disabled' ? 'loading="{{ item.headshot.loading }}"' : '' %}
+         <img src="{{ item.headshot.src }}" alt="{{ item.headshot.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+        {% else %}
+         <img src="{{ get_asset_url('../../images/dogs-head.jpg') }}" alt="A Dignified dogs" />
+        {% endif %}
+      </div>
+
+  </div>
+  {% endfor %}
+</div>
+
+
+
+{% require_js %}
+<script>
+
+</script>
+{% end_require_js %}

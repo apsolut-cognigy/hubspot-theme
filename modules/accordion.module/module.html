@@ -1,0 +1,40 @@
+<div class="box-list boxes-3x3">
+  {% for item in module.box_3x3 %}
+  <div class="box-item {{ item.img_options }} {{ module.layout_style }}">
+
+    <h3 class="heading">
+      {% inline_text field="heading" value="{{ item.heading }}" %}
+    </h3>
+
+    <span class="description">
+      {% inline_text field="description" value="{{ item.description }}" %}
+    </span>
+
+    {% if item.headshot.src %}
+    {% set sizeAttrs = 'width="{{ item.headshot.width }}" height="{{ item.headshot.height }}"' %}
+
+    {% if item.headshot.size_type == 'auto' %}
+    {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+    {% elif item.headshot.size_type == 'auto_custom_max' %}
+    {% set sizeAttrs = 'width="{{ item.headshot.max_width }}" height="{{ item.headshot.max_height }}" style="max-width: 100%; height: auto;"' %}
+    {% endif %}
+
+
+      {% set loadingAttr = item.headshot.loading != 'disabled' ? 'loading="{{ item.headshot.loading }}"' : '' %}
+        <div class="content-image"><img src="{{ item.headshot.src }}" alt="{{ item.headshot.alt }}" {{ loadingAttr }} {{ sizeAttrs }}> </div>
+      {% else %}
+        <div class="content-image"><img src="{{ get_asset_url('../../images/dogs-head.jpg') }}" alt="A Dignified dogs" /> </div>
+      {% endif %}
+
+
+  </div>
+  {% endfor %}
+</div>
+
+
+
+{% require_js %}
+<script>
+
+</script>
+{% end_require_js %}

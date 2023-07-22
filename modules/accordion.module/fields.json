@@ -1,0 +1,112 @@
+[
+  {
+    "label": "Cognigy: Accordion",
+    "name": "cognigy_accordion",
+    "type": "choice",
+    "choices": [
+      [ "light", "Light" ],
+      [ "white", "White" ]
+    ],
+    "display": "select",
+    "required": false,
+    "default": "light"
+  },
+  {
+  "id" : "39179274806575068729",
+  "name" : "box_3x3",
+  "label" : "Boxes 3x3",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 3
+  },
+
+  "children" : [ {
+    "id" : "7225142303511134539",
+    "name" : "headshot",
+    "label" : "Headshot",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    }
+  },
+  {
+      "name" : "img_options",
+      "label" : "Image Options",
+      "required" : false,
+      "locked" : false,
+      "multiple": "false",
+      "display" : "select",
+      "choices" : [ [ "img--bottom", "Image bottom" ], [ "img--top", "Image top - as Icon" ] ],
+      "type" : "choice",
+      "default" : "img--bottom"
+    },
+
+    {
+    "id" : "24625822889544174955",
+    "name" : "heading",
+    "label" : "Heading",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "We know the industry"
+  }, {
+    "id" : "74856689397247712506",
+    "name" : "description",
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "With over 12 years of experience, we know the industry like the back of our hand."
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "headshot" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null,
+      "loading" : "lazy"
+    },
+    "heading" : "We know the industry",
+    "description" : "With over 12 years of experience, we know the industry like the back of our hand."
+  },
+    {
+      "headshot" : {
+        "size_type" : "auto",
+        "src" : "",
+        "alt" : null,
+        "loading" : "lazy"
+      },
+      "heading" : "We know the industry",
+      "description" : "With over 12 years of experience, we know the industry like the back of our hand."
+    },
+    {
+      "headshot" : {
+        "size_type" : "auto",
+        "src" : "",
+        "alt" : null,
+        "loading" : "lazy"
+      },
+      "heading" : "We know the industry",
+      "description" : "With over 12 years of experience, we know the industry like the back of our hand."
+    } ]
+} ]

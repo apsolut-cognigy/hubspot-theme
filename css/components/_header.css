@@ -39,7 +39,7 @@
 }
 
 .header__logo .logo-company-name {
-  color: #00326d;
+  color: #0B3694;
   font-size: 28px;
   margin-bottom: 0;
 }
@@ -145,8 +145,8 @@
 
 .header__language-switcher-label-current,
 .header__language-switcher .lang_list_class li a {
-  color: #00326d;
-  font-family: 'Nunito Sans', sans-serif;
+  color: #0B3694;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
   font-weight: 800;
   text-decoration: none;
@@ -156,12 +156,12 @@
 .header__language-switcher-label-current:focus,
 .header__language-switcher .lang_list_class li:hover a,
 .header__language-switcher .lang_list_class li a:focus {
-  color: {{ color_variant('#00326d', -40) }};
+  color: {{ color_variant('#0B3694', -40) }};
 }
 
 .header__language-switcher-label-current:active,
 .header__language-switcher .lang_list_class li a:active {
-  color: {{ color_variant('#00326d', 40) }};
+  color: {{ color_variant('#0B3694', 40) }};
 }
 
 .header__language-switcher-label {
@@ -186,7 +186,7 @@
 .header__language-switcher-label-current:after {
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
-  border-top: 6px solid #00326d;
+  border-top: 6px solid #0B3694;
   content: '';
   display: block;
   height: 0;

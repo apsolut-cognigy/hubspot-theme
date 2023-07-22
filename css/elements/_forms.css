@@ -15,7 +15,7 @@ form {
 /* Form Title */
 
 .form-title {
-  background-color: #00326d;
+  background-color: #0B3694;
   border-radius: 18px 18px 0 0;
   color: #fff;
   margin: 0;
@@ -169,18 +169,18 @@ input[type='radio'] {
 }
 
 .fn-date-picker .pika-table thead th {
-  color: #00326d;
+  color: #0B3694;
 }
 
 .fn-date-picker td.is-today .pika-button {
-  color: #00326d;
+  color: #0B3694;
 }
 
 .fn-date-picker td.is-selected .pika-button {
   background: #fff9e3;
   border-radius: 0;
   box-shadow: none;
-  color: #00326d;
+  color: #0B3694;
 }
 
 .fn-date-picker td .pika-button:hover {

@@ -1,0 +1,66 @@
+[
+  {
+    "label": "Background",
+    "name": "layout_background",
+    "type": "choice",
+    "choices": [
+      [ "light", "Light" ],
+      [ "white", "White" ]
+    ],
+    "display": "select",
+    "required": false,
+    "default": "light"
+  },
+  {
+    "label": "Typography",
+    "name": "layout_typography",
+    "type": "choice",
+    "choices": [
+      [ "h1", "H1" ],
+      [ "h2", "H2" ],
+      [ "h3", "H3" ],
+      [ "h4", "H4" ],
+      [ "h5", "H5" ]
+    ],
+    "display": "select",
+    "required": false,
+    "default": "h2"
+  },
+  {
+
+    "name" : "subheading",
+    "label" : "Subheading",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Trust in our experience"
+  },
+  {
+
+    "name" : "heading",
+    "label" : "Heading",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "header_tag" : "h2",
+    "default" : "We know the industry"
+  },
+  {
+
+    "name" : "description",
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "richtext",
+    "default" : "With over 12 years of experience, we know the industry like the back of our hand."
+  }
+]

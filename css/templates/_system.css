@@ -91,12 +91,12 @@ form#email-prefs-form input#submitbutton {
 }
 
 .hs-search-results__pagination a {
-  color: #00326d;
+  color: #0B3694;
 }
 
 .hs-search-results__title {
-  color: #00326d;
-  font-family: 'Nunito Sans', sans-serif;
+  color: #0B3694;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1.25rem;
   margin-bottom: 0.25rem;
   text-decoration: underline;

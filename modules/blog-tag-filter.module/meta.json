@@ -1,9 +1,0 @@
-{
-  "global" : false,
-  "master_language" : "en",
-  "icon" : "/cognigy/images/module-icons/filter.svg",
-  "host_template_types" : [ "BLOG_LISTING", "BLOG_POST" ],
-  "module_id" : 36585676619,
-  "label" : "Blog tag filter",
-  "is_available_for_new_content" : true
-}

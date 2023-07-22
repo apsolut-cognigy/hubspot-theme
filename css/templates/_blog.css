@@ -175,7 +175,7 @@
 }
 
 .blog-card__title a {
-  color: #00326d;
+  color: #0B3694;
   font-weight: inherit;
 }
 
@@ -187,7 +187,7 @@
 }
 
 .blog-card__title a:active {
-  color: #00326d;
+  color: #0B3694;
 }
 
 .blog-card__tags {
@@ -242,7 +242,7 @@
 }
 
 .blog-post__author-links svg {
-  fill: #00326d;
+  fill: #0B3694;
 }
 
 .blog-post__author-links a:hover svg {
@@ -273,7 +273,7 @@
 }
 
 .blog-pagination__link {
-  color: #00326d;
+  color: #0B3694;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -290,7 +290,7 @@
 
 .blog-pagination__link:hover,
 .blog-pagination__link:focus {
-  color: #00326d;
+  color: #0B3694;
   text-decoration: none;
 }
 
@@ -327,13 +327,13 @@
 
 .blog-pagination__prev-link svg,
 .blog-pagination__next-link svg {
-  fill: #00326d;
+  fill: #0B3694;
   margin: 0 5px;
 }
 
 .blog-pagination__link:hover svg,
 .blog-pagination__link:focus svg {
-  fill: #00326d;
+  fill: #0B3694;
 }
 
 .blog-pagination__prev-link--disabled svg,

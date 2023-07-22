@@ -1,7 +1,7 @@
 {
   "label" : "cognigy",
   "preview_path" : "./templates/home.html",
-  "screenshot_path" : "./images/template-previews/session.png",
+  "screenshot_path" : "./images/template-previews/cognigy.png",
   "enable_domain_stylesheets" : null,
   "responsive_breakpoints" : [ {
     "name" : "mobile",
