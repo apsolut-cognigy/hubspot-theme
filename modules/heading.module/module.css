@@ -1,14 +1,13 @@
-.cognigy-heading {
-
-}
-
 .cognigy-heading .cognigy-content {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin-inline: auto;
+    max-width: 750px;
 }
+
 
 @media (max-width: 769px) {
 

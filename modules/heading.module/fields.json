@@ -36,7 +36,7 @@
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
-    "default" : "Trust in our experience"
+    "default" : "AI: Unleash the Power"
   },
   {
 
@@ -49,7 +49,7 @@
     "show_emoji_picker" : false,
     "type" : "text",
     "header_tag" : "h2",
-    "default" : "We know the industry"
+    "default" : "Design Matters: Unleashing the Power of Visuals!"
   },
   {
 
@@ -61,6 +61,6 @@
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "richtext",
-    "default" : "With over 12 years of experience, we know the industry like the back of our hand."
+    "default" : "Welcome to the world of design where visual awesomeness reigns supreme! In this section, we'll explore the significance of good design and why it has the power to captivate hearts and minds. Get ready for a witty and punchy adventure as we unveil the secrets behind the magic of great design."
   }
 ]
