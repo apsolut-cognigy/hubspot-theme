@@ -84,12 +84,13 @@
         "type" : "choice",
         "default" : "image"
       }, {
-        "id" : "media.video",
-        "name" : "video",
-        "display_width" : null,
-        "label" : "Title",
+        "name" : "file_field",
+        "label" : "File",
         "required" : false,
         "locked" : false,
+        "type" : "file",
+        "picker" : "file",
+        "default" : null,
         "validation_regex" : "",
         "visibility" : {
           "controlling_field" : "purpose",
@@ -99,19 +100,9 @@
           "hidden_subfields" : null
         },
         "allow_new_line" : false,
-        "show_emoji_picker" : false,
-        "type" : "videoplayer"
-      },
-      {
-        "name" : "file_field",
-        "label" : "File",
-        "required" : false,
-        "locked" : false,
-        "type" : "video",
-        "picker" : "file",
-        "default" : null
-      }
-      ],
+        "show_emoji_picker" : false
+
+      } ],
       "tab" : "CONTENT",
       "expanded" : false,
       "type" : "group"
@@ -129,7 +120,11 @@
       "loading" : "lazy"
     },
     "heading" : "Design: Making the World Beautiful, One Pixel at a Time",
-    "description" : "Welcome to the world of design where visual awesomeness reigns supreme! In this section, we'll explore the significance of good design and why it has the power to captivate hearts and minds. Get ready for a witty and punchy adventure as we unveil the secrets behind the magic of great design."
+    "description" : "Welcome to the world of design where visual awesomeness reigns supreme! In this section, we'll explore the significance of good design and why it has the power to captivate hearts and minds. Get ready for a witty and punchy adventure as we unveil the secrets behind the magic of great design.",
+    "media" : {
+      "purpose" : "image",
+      "file_field" : null
+    }
   },
     {
       "headshot" : {
@@ -139,7 +134,11 @@
         "loading" : "lazy"
       },
       "heading" : "First Impressions Last: Design That Hooks You in a Blink",
-      "description" : "In a world of short attention spans, good design is the ultimate attention-grabber. It's like a magnetic force that hooks users in a mere blink of an eye. With eye-catching visuals, intuitive layouts, and seamless experiences, great design leaves a lasting impression that keeps users coming back for more."
+      "description" : "In a world of short attention spans, good design is the ultimate attention-grabber. It's like a magnetic force that hooks users in a mere blink of an eye. With eye-catching visuals, intuitive layouts, and seamless experiences, great design leaves a lasting impression that keeps users coming back for more.",
+      "media" : {
+        "purpose" : "image",
+        "file_field" : null
+      }
     },
     {
       "headshot" : {
@@ -149,7 +148,11 @@
         "loading" : "lazy"
       },
       "heading" : "Design Delight: The Joy of Smooth Interactions",
-      "description" : "Ever clicked a button and felt an inexplicable rush of satisfaction? That's the power of good design! From delightful micro-interactions to seamless user flows, designers sprinkle magic dust on every element, making interactions feel like a joyride. Prepare to be enchanted by the whimsical world of design delight!"
+      "description" : "Ever clicked a button and felt an inexplicable rush of satisfaction? That's the power of good design! From delightful micro-interactions to seamless user flows, designers sprinkle magic dust on every element, making interactions feel like a joyride. Prepare to be enchanted by the whimsical world of design delight!",
+      "media" : {
+        "purpose" : "image",
+        "file_field" : null
+      }
     }
   ,
     {
@@ -160,7 +163,11 @@
         "loading" : "lazy"
       },
       "heading" : "The Bottom Line: Design That Boosts Business",
-      "description" : "Good design isn't just visually appealing; it's a game-changer for businesses. It drives engagement, builds trust, and helps companies stand out from the crowd. From compelling branding to intuitive interfaces, great design has the power to elevate businesses to new heights. Embrace the design revolution and reap the rewards!"
+      "description" : "Good design isn't just visually appealing; it's a game-changer for businesses. It drives engagement, builds trust, and helps companies stand out from the crowd. From compelling branding to intuitive interfaces, great design has the power to elevate businesses to new heights. Embrace the design revolution and reap the rewards!",
+      "media" : {
+        "purpose" : "video",
+        "file_field" : null
+      }
 
     }
   ]

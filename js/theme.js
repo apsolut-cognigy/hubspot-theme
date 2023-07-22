@@ -31,10 +31,10 @@ function setStyle(element, property, value) {
 
 // Get first element
 var firstAccordionContent = getElementByClassName('accordion-content');
-gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(firstAccordionContent, {
+gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.set(firstAccordionContent, {
   height: "auto",
   autoAlpha: 1,
-  duration: .35
+  duration: 0
 });
 
 // Main logic
@@ -44,34 +44,41 @@ document.querySelectorAll('.accordion-menu').forEach(function (accordionMenu) {
 
     // if has class expanded don't allow animations etc. no need to duplicate step
     if (!parent.classList.contains('is-expanded')) {
-      var stepImageDesktop = getElementByClassName('step-image-desktop');
+      // const stepLeftContainer = getElementByClassName('accordion-left');
+      var accordionLeftContent = getElementByClassName('accordion-left');
 
       // Clear the existing content
-      stepImageDesktop.innerHTML = '';
+      accordionLeftContent.innerHTML = '';
 
       // Get the background image of the clicked accordion
       // step-bg-video
-      var stepBgImage = parent.querySelector('.step-bg-image');
-      var stepBgVideo = parent.querySelector('.step-bg-video');
+      var stepBgImage = parent.querySelector('.accordion-media');
       if (stepBgImage) {
-        var _stepImageDesktop = getElementByClassName('step-image-desktop');
-        var getStepImage = getComputedStyleValue(stepBgImage, 'background-image');
-        // Set the background image for step-image-desktop
-        // setStyle(stepImageDesktop, 'background-image', getStepImage);
-        _stepImageDesktop.src = stepBgImage.getAttribute('data-bg');
-        _stepImageDesktop.alt = stepBgImage.getAttribute('data-alt');
-        _stepImageDesktop.width = '100%';
-        _stepImageDesktop.height = '100%';
+        //accordionLeftContent.innerHTML = stepBgImage.outerHTML;
+        //accordionLeftContent.classList.remove('hidden')
+        var clonedElement = stepBgImage.cloneNode(true);
+        clonedElement.classList.remove('hidden');
+        accordionLeftContent.appendChild(clonedElement);
+
+        // const stepImageDesktop = getElementByClassName('step-image-desktop');
+        // const getStepImage = getComputedStyleValue(stepBgImage, 'background-image');
+        // // Set the background image for step-image-desktop
+        // // setStyle(stepImageDesktop, 'background-image', getStepImage);
+        // stepImageDesktop.src = stepBgImage.getAttribute('data-bg');
+        // stepImageDesktop.alt = stepBgImage.getAttribute('data-alt');
+        // stepImageDesktop.width = '100%';
+        // stepImageDesktop.height = '100%';
       }
-      if (stepBgVideo) {
-        stepImageDesktop.parentElement.innerHTML = stepBgVideo.innerHTML;
-        // var hbspt = window.hbspt || {};
-        // hbspt = { _legacy: false, api: { target: '.accordion-left', player_id: '5842dcaa-6a4a-4aad-9722-9c18f5776b12' } };
-        // function playVideo() {
-        //     hbspt.api.player.play();
-        // }
-        // playVideo();
-      }
+      // if ( stepBgVideo ) {
+      //     stepImageDesktop.parentElement.innerHTML = stepBgVideo.innerHTML;
+      //     // var hbspt = window.hbspt || {};
+      //     // hbspt = { _legacy: false, api: { target: '.accordion-left', player_id: '5842dcaa-6a4a-4aad-9722-9c18f5776b12' } };
+      //     // function playVideo() {
+      //     //     hbspt.api.player.play();
+      //     // }
+      //     // playVideo();
+      //
+      // }
 
       // Hide all accordion-content and remove the 'animateIn' class from them
       document.querySelectorAll('.accordion-content').forEach(function (accordionContent) {

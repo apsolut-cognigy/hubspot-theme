@@ -9,6 +9,18 @@
     {% for item in module.accordion_items %}
     {% if loop.first %}
 
+
+    {% if item.media.purpose == 'video' %}
+
+    <div class="accordion-media" data-bg="{{ item.headshot.src }}">
+      <video autoplay loop controls>
+        <source src="{{ item.media.file_field }}" type="video/mp4">
+        <!-- Add more <source> elements for other video formats (WebM, Ogg, etc.) -->
+      </video>
+    </div>
+
+    {% else %}
+
     {% if item.headshot.src %}
     {% set sizeAttrs = 'width="{{ item.headshot.width }}" height="{{ item.headshot.height }}"' %}
 
@@ -19,11 +31,16 @@
     {% endif %}
 
     {% set loadingAttr = item.headshot.loading != 'disabled' ? 'loading="{{ item.headshot.loading }}"' : '' %}
-    <img src="{{ item.headshot.src }}" alt="{{ item.headshot.alt }}" {{ loadingAttr }} class="step-image-desktop">
+    <div class="accordion-media" data-alt="{{ item.headshot.alt }}" data-bg="{{ item.headshot.src }}">
+      <img src="{{ item.headshot.src }}" alt="{{ item.headshot.alt }}" {{ loadingAttr }} class="step-image-desktop">
+    </div>
     {% else %}
-    <img src="{{ get_asset_url('../../images/default-accordion.png') }}" alt="A default accordion image" />
+    <div class="accordion-media"  data-bg="{{ get_asset_url('../../images/default-accordion.png') }}">
+      <img src="{{ get_asset_url('../../images/default-accordion.png') }}" alt="A default accordion image" />
+    </div>
     {% endif %}
 
+    {% endif %}
     {% endif %}
     {% endfor %}
 
@@ -31,57 +48,42 @@
   <div class="accordion-right accordion-half">
     {% for item in module.accordion_items %}
 
-    <div class="accordion-group {{ module.layout_style }} mb-5 {% if loop.first %}is-expanded{% endif %}">
+
+
+    <div class="accordion-group {{ module.layout_style }} {% if loop.first %}is-expanded{% endif %} {% if item.media.purpose %}is-video{% endif %}">
       <div class="icon">
           <svg class="w-full"  width="45" height="45" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg" fill="none"><g fill="#9ccef7" ><path d="M70 6a64.003 64.003 0 0 1 59.128 39.508 63.995 63.995 0 0 1-13.873 69.747 64.002 64.002 0 0 1-98.469-9.699A63.997 63.997 0 0 1 6 70 64.07 64.07 0 0 1 70 6Zm0-6a70 70 0 1 0 0 140A70 70 0 0 0 70 0Z"/><path d="M104.324 40.63 54.345 90.761l-17.67-17.724a2.137 2.137 0 0 0-3.028 0l-2.02 2.026a2.153 2.153 0 0 0 0 3.038l21.204 21.269c.836.839 2.192.839 3.029 0l53.513-53.678c.836-.839.836-2.199 0-3.038l-2.02-2.026a2.137 2.137 0 0 0-3.029 0Z"/></g></svg>
         </div>
-        <div class="content">
+      <div class="content">
            <h3 class="heading accordion-menu mb-0">
             {% inline_text field="heading" value="{{ item.heading }}" %}
           </h3>
           <div class="description accordion-content">
           {% inline_text field="description" value="{{ item.description }}" %}
 
-
-
           {% if item.media.purpose == 'video' %}
-            <div class="step-bg-video hidden" data-bg="{{ item.headshot.src }}">
 
-              {% if item.media.video.player_id %}
-                {% set max_width = item.media.video.size_type == 'auto_custom_max' ? item.media.video.max_width : item.media.video.width %}
-                  {% set max_height = item.media.video.size_type == 'auto_custom_max' ? item.media.video.max_height : item.media.video.height %}
-                  {% video_player "embed_player"
-                  autoplay=true,
-                  conversion_asset={{ item.media.video.conversion_asset|tojson|safe }},
-                  full_width={{ item.media.video.size_type == 'auto_full_width' }},
-                  height="100%",
-                  hidden_controls=true,
-                  loop=true,
-                  muted={{ item.media.video.mute_by_default }},
-                  play_button_color={{ module.style_options.oembed_thumbnail_play_button_color.color }},
-                  player_id={{ item.media.video.player_id }},
-                  type={{ item.media.video.player_type or 'scriptV4' }},
-                  width="100%",
-                %}
-              {% endif %}
-
+            <div class="accordion-media hidden" data-bg="{{ item.headshot.src }}">
+              <video autoplay loop controls>
+                <source src="{{ item.media.file_field }}" type="video/mp4">
+                <!-- Add more <source> elements for other video formats (WebM, Ogg, etc.) -->
+              </video>
             </div>
+
           {% else %}
 
             {% if item.headshot.src %}
             {% set loadingAttr = item.headshot.loading != 'disabled' ? 'loading="{{ item.headshot.loading }}"' : '' %}
-            <div class="step-bg-image hidden" data-alt="{{ item.headshot.alt }}" data-bg="{{ item.headshot.src }}">
+            <div class="accordion-media hidden" data-alt="{{ item.headshot.alt }}" data-bg="{{ item.headshot.src }}">
               <img src="{{ item.headshot.src }}" alt="{{ item.headshot.alt }}" {{ loadingAttr }} class="step-image-desktop">
             </div>
             {% else %}
-            <div class="step-bg-image hidden"  data-bg="{{ get_asset_url('../../images/default-accordion.png') }}">
+            <div class="accordion-media hidden"  data-bg="{{ get_asset_url('../../images/default-accordion.png') }}">
               <img src="{{ get_asset_url('../../images/default-accordion.png') }}" alt="A default accordion image" />
             </div>
             {% endif %}
 
           {% endif %}
-
-
 
 
         </div>

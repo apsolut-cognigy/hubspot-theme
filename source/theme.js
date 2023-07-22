@@ -21,7 +21,7 @@ function setStyle(element, property, value) {
 
 // Get first element
 const firstAccordionContent = getElementByClassName('accordion-content');
-gsap.to(firstAccordionContent, {height: "auto", autoAlpha: 1, duration: .35})
+gsap.set(firstAccordionContent, {height: "auto", autoAlpha: 1, duration: 0})
 
 // Main logic
 document.querySelectorAll('.accordion-menu').forEach((accordionMenu) => {
@@ -30,35 +30,42 @@ document.querySelectorAll('.accordion-menu').forEach((accordionMenu) => {
 
         // if has class expanded don't allow animations etc. no need to duplicate step
         if (!parent.classList.contains('is-expanded')) {
-            const stepImageDesktop = getElementByClassName('step-image-desktop');
+            // const stepLeftContainer = getElementByClassName('accordion-left');
+            const accordionLeftContent = getElementByClassName('accordion-left');
 
             // Clear the existing content
-            stepImageDesktop.innerHTML = '';
+            accordionLeftContent.innerHTML = '';
 
             // Get the background image of the clicked accordion
             // step-bg-video
-            const stepBgImage = parent.querySelector('.step-bg-image');
-            const stepBgVideo = parent.querySelector('.step-bg-video');
+            const stepBgImage = parent.querySelector('.accordion-media');
             if ( stepBgImage ) {
-                const stepImageDesktop = getElementByClassName('step-image-desktop');
-                const getStepImage = getComputedStyleValue(stepBgImage, 'background-image');
-                // Set the background image for step-image-desktop
-                // setStyle(stepImageDesktop, 'background-image', getStepImage);
-                stepImageDesktop.src = stepBgImage.getAttribute('data-bg');
-                stepImageDesktop.alt = stepBgImage.getAttribute('data-alt');
-                stepImageDesktop.width = '100%';
-                stepImageDesktop.height = '100%';
-            }
-            if ( stepBgVideo ) {
-                stepImageDesktop.parentElement.innerHTML = stepBgVideo.innerHTML;
-                // var hbspt = window.hbspt || {};
-                // hbspt = { _legacy: false, api: { target: '.accordion-left', player_id: '5842dcaa-6a4a-4aad-9722-9c18f5776b12' } };
-                // function playVideo() {
-                //     hbspt.api.player.play();
-                // }
-                // playVideo();
 
+                //accordionLeftContent.innerHTML = stepBgImage.outerHTML;
+                //accordionLeftContent.classList.remove('hidden')
+                const clonedElement = stepBgImage.cloneNode(true);
+                clonedElement.classList.remove('hidden');
+                accordionLeftContent.appendChild(clonedElement);
+
+                // const stepImageDesktop = getElementByClassName('step-image-desktop');
+                // const getStepImage = getComputedStyleValue(stepBgImage, 'background-image');
+                // // Set the background image for step-image-desktop
+                // // setStyle(stepImageDesktop, 'background-image', getStepImage);
+                // stepImageDesktop.src = stepBgImage.getAttribute('data-bg');
+                // stepImageDesktop.alt = stepBgImage.getAttribute('data-alt');
+                // stepImageDesktop.width = '100%';
+                // stepImageDesktop.height = '100%';
             }
+            // if ( stepBgVideo ) {
+            //     stepImageDesktop.parentElement.innerHTML = stepBgVideo.innerHTML;
+            //     // var hbspt = window.hbspt || {};
+            //     // hbspt = { _legacy: false, api: { target: '.accordion-left', player_id: '5842dcaa-6a4a-4aad-9722-9c18f5776b12' } };
+            //     // function playVideo() {
+            //     //     hbspt.api.player.play();
+            //     // }
+            //     // playVideo();
+            //
+            // }
 
             // Hide all accordion-content and remove the 'animateIn' class from them
             document.querySelectorAll('.accordion-content').forEach((accordionContent) => {
