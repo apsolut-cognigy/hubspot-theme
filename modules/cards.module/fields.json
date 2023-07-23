@@ -1,5 +1,16 @@
 [
-
+  {
+    "label": "Cognigy: Cards",
+    "name": "cognigy_cards",
+    "type": "choice",
+    "choices": [
+      [ "light", "Light" ],
+      [ "white", "White" ]
+    ],
+    "display": "select",
+    "required": false,
+    "default": "light"
+  },
   {
   "id" : "39179274806575068729",
   "name" : "accordion_items",

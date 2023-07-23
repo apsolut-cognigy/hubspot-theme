@@ -4,7 +4,7 @@
 
 {% end_require_js %}
 
-<div class="cognigy-accordion accordion-v1 accodion-{{ name }}">
+<div class="cognigy-accordion accordion-{{ name }}">
   <div class="accordion-left accordion-half">
     {% for item in module.accordion_items %}
     {% if loop.first %}
@@ -52,7 +52,7 @@
           <svg class="w-full"  width="45" height="45" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg" fill="none"><g fill="#9ccef7" ><path d="M70 6a64.003 64.003 0 0 1 59.128 39.508 63.995 63.995 0 0 1-13.873 69.747 64.002 64.002 0 0 1-98.469-9.699A63.997 63.997 0 0 1 6 70 64.07 64.07 0 0 1 70 6Zm0-6a70 70 0 1 0 0 140A70 70 0 0 0 70 0Z"/><path d="M104.324 40.63 54.345 90.761l-17.67-17.724a2.137 2.137 0 0 0-3.028 0l-2.02 2.026a2.153 2.153 0 0 0 0 3.038l21.204 21.269c.836.839 2.192.839 3.029 0l53.513-53.678c.836-.839.836-2.199 0-3.038l-2.02-2.026a2.137 2.137 0 0 0-3.029 0Z"/></g></svg>
         </div>
       <div class="content">
-          <h3 class="heading accordion-menu accordion-menu-v1 mb-0">
+          <h3 class="heading accordion-menu accordion-menu-v2 mb-0">
             {% inline_text field="heading" value="{{ item.heading }}" %}
             <span><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path id="acc-horizontal" d="M10.5 5.5H0.5" stroke="#171D29" stroke-miterlimit="10" stroke-linecap="square"/>

@@ -1,16 +1,18 @@
-<div class="cognigy-heading {{ module.layout_background }} py-28">
+<div class="cognigy-heading {{ module.layout_background }} py-28 px-5 lg:px-0 [&.dark]:bg-blue [&.dark]:text-white">
   {% for item in module.heading %}
-  <div class="cognigy-content flex flex-col flex-wrap content-center items-center mx-auto max-w-3xl {{ module.layout_background }} text-center">
+  <div class="cognigy-content flex flex-col flex-wrap content-center items-center mx-auto max-w-3xl text-center {{ module.layout_background }}">
 
         {% if module.subheading %}
             <div class="cognigy-label text-16 font-semibold mb-5">
                 {% inline_text field="subheading" value="{{ module.subheading }}" %}
             </div>
         {% endif %}
-        <div class="cognigy-title text-32 font-bold leading-6">
-            {% header "heading" header_tag="{{ module.layout_typography }}", overrideable=True, value="{{ module.heading }}", label="header" %}
+        <div class="cognigy-title text-32 font-bold leading-6 text-black [&.dark]:text-white [&.dark]:[&>*]:text-white">
+            <{{ module.layout_typography }} class="{{ module.layout_background }} [&.dark]:text-white">
+                {{ module.heading }}
+            </{{ module.layout_typography }}>
         </div>
-        <div class="cognigy-description text-20 font-medium leading-6">
+        <div class="cognigy-description text-20 font-medium leading-6 text-black {{ module.layout_background }} [&.dark]:text-white">
             {% inline_text field="description" value="{{ module.description }}" %}
         </div>
 

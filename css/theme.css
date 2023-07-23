@@ -42,11 +42,11 @@
     margin-left: auto;
     margin-right: auto
 }
-.mb-5 {
-    margin-bottom: 1.25rem
-}
 .mb-0 {
     margin-bottom: 0px
+}
+.mb-5 {
+    margin-bottom: 1.25rem
 }
 .block {
     display: block
@@ -81,9 +81,9 @@
 .items-center {
     align-items: center
 }
-.py-96 {
-    padding-top: 24rem;
-    padding-bottom: 24rem
+.px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem
 }
 .py-28 {
     padding-top: 7rem;
@@ -114,4 +114,90 @@
 }
 .leading-6 {
     line-height: 1.5rem
+}
+.text-black {
+    --tw-text-opacity: 1;
+    color: rgb(26 24 24 / var(--tw-text-opacity))
+}
+@media (prefers-color-scheme: dark) {
+    .dark\:bg-blue {
+        --tw-bg-opacity: 1;
+        background-color: rgb(11 54 148 / var(--tw-bg-opacity))
+    }
+    .dark\:text-blue-light {
+        --tw-text-opacity: 1;
+        color: rgb(61 159 255 / var(--tw-text-opacity))
+    }
+    .dark\:text-white {
+        --tw-text-opacity: 1;
+        color: rgb(245 245 245 / var(--tw-text-opacity))
+    }
+}
+@media (min-width: 768px) {
+    .md\:visible {
+        visibility: visible
+    }
+    .md\:hidden {
+        display: none
+    }
+}
+@media (min-width: 1024px) {
+    .lg\:px-0 {
+        padding-left: 0px;
+        padding-right: 0px
+    }
+}
+.\[\&\.dark\]\:bg-blue.dark {
+    --tw-bg-opacity: 1;
+    background-color: rgb(11 54 148 / var(--tw-bg-opacity))
+}
+.\[\&\.dark\]\:text-white.dark {
+    --tw-text-opacity: 1;
+    color: rgb(245 245 245 / var(--tw-text-opacity))
+}
+@media (prefers-color-scheme: dark) {
+    .dark\:\[\&\>\*\]\:text-white>* {
+        --tw-text-opacity: 1;
+        color: rgb(245 245 245 / var(--tw-text-opacity))
+    }
+}
+.\[\&\.dark\]\:\[\&\>\*\]\:text-white>*.dark {
+    --tw-text-opacity: 1;
+    color: rgb(245 245 245 / var(--tw-text-opacity))
+}
+.\[\&\>h2\]\:text-white>h2 {
+    --tw-text-opacity: 1;
+    color: rgb(245 245 245 / var(--tw-text-opacity))
+}
+.\[\&\>h3\]\:text-white>h3 {
+    --tw-text-opacity: 1;
+    color: rgb(245 245 245 / var(--tw-text-opacity))
+}
+.\[\&\>h3\]\:\!text-white>h3 {
+    --tw-text-opacity: 1 !important;
+    color: rgb(245 245 245 / var(--tw-text-opacity)) !important
+}
+.\[\&\>span\>h3\]\:text-white>span>h3 {
+    --tw-text-opacity: 1;
+    color: rgb(245 245 245 / var(--tw-text-opacity))
+}
+.\[\&\>span\]\:text-white>span {
+    --tw-text-opacity: 1;
+    color: rgb(245 245 245 / var(--tw-text-opacity))
+}
+.\[\&_h3\]\:text-white h3 {
+    --tw-text-opacity: 1;
+    color: rgb(245 245 245 / var(--tw-text-opacity))
+}
+.\[\&_h3\]\:\!text-white h3 {
+    --tw-text-opacity: 1 !important;
+    color: rgb(245 245 245 / var(--tw-text-opacity)) !important
+}
+.\[\&\>span\]\:\[\&_h3\]\:\!text-white h3>span {
+    --tw-text-opacity: 1 !important;
+    color: rgb(245 245 245 / var(--tw-text-opacity)) !important
+}
+.\[\&h3\]\:text-whiteh3 {
+    --tw-text-opacity: 1;
+    color: rgb(245 245 245 / var(--tw-text-opacity))
 }

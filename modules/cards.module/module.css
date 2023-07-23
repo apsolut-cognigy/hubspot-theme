@@ -51,9 +51,7 @@
     height: 0;
     overflow: hidden;
 }
-.cognigy-accordion .accordion-group.is-expanded svg path#acc-vertical {
-    display: none;
-}
+
 .cognigy-accordion .accordion-group.is-expanded svg g {
     fill: #3d9fff;
 }
@@ -91,25 +89,7 @@
     flex-basis: 45%;
 }
 @media (max-width: 769px) {
-    .accordion-left {
-        display: none;
-    }
-    .accordion-right,
-    .accordion-right.accordion-half {
-        width: 100%;
-        flex-basis: 100%;
-    }
-    .accordion-media {
-        display: block;
-    }
-    .accordion-right .accordion-media video,
-    .accordion-right .accordion-media img,
-    .accordion-right .accordion-media .hs-video-widget {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+
 }
 
 @media only screen and (min-width: 770px) {

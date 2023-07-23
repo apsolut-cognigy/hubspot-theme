@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require('tailwindcss/plugin')
 module.exports = {
     mode: 'jit',
     content: [
@@ -33,10 +34,13 @@ module.exports = {
             'footer-bg': '#f5f5f6',
             'dark': '#f5f9fc',
             'black': '#1A1818',
-            'white': '#FFFFFF',
+            'white': '#f5f5f5',
         },
     },
     plugins: [
-
+        plugin(function({ addVariant }) {
+            addVariant('optional', '&:optional')
+            addVariant('dark', ['&:dark', '&:darken'])
+        })
     ],
 }

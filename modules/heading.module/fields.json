@@ -5,7 +5,7 @@
     "type": "choice",
     "choices": [
       [ "light", "Light" ],
-      [ "white", "White" ]
+      [ "dark", "Dark" ]
     ],
     "display": "select",
     "required": false,
@@ -27,7 +27,6 @@
     "default": "h2"
   },
   {
-
     "name" : "subheading",
     "label" : "Subheading",
     "required" : false,
@@ -39,7 +38,6 @@
     "default" : "AI: Unleash the Power"
   },
   {
-
     "name" : "heading",
     "label" : "Heading",
     "required" : false,
@@ -52,7 +50,6 @@
     "default" : "Design Matters: Unleashing the Power of Visuals!"
   },
   {
-
     "name" : "description",
     "label" : "Description",
     "required" : false,
