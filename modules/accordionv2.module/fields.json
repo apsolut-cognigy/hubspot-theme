@@ -13,7 +13,25 @@
     "default" : 3
   },
 
-  "children" : [ {
+  "children" : [
+    {
+      "id" : "19225142303516734539",
+      "name" : "icon",
+      "label" : "icon",
+      "required" : false,
+      "locked" : false,
+      "responsive" : true,
+      "resizable" : false,
+      "show_loading" : false,
+      "type" : "image",
+      "default" : {
+        "size_type" : "auto",
+        "src" : "",
+        "alt" : null,
+        "loading" : "lazy"
+      }
+    },
+    {
     "id" : "7225142303511134539",
     "name" : "headshot",
     "label" : "Headshot",
@@ -27,7 +45,7 @@
       "size_type" : "auto",
       "src" : "",
       "alt" : null,
-      "loading" : "lazy"
+      "loading" : "disabled"
     }
   },
     {

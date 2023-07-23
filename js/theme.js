@@ -11,10 +11,13 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
 /* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+/* harmony import */ var gsap_CSSPlugin__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gsap/CSSPlugin */ "./node_modules/gsap/CSSPlugin.js");
 // core version
 
 
+
 gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger);
+gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_CSSPlugin__WEBPACK_IMPORTED_MODULE_2__.CSSPlugin);
 gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger.defaults({
   markers: false
 });
@@ -40,15 +43,22 @@ function setStyle(element, property, value) {
 }
 
 // Get first element
-var firstAccordionContent = getElementByClassName('accordion-content');
+var firstAccordionContent = getElementByClassName('accordion-content-v1');
 gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.set(firstAccordionContent, {
+  display: "block",
+  height: "auto",
+  autoAlpha: 1,
+  duration: 0
+});
+var firstAccordionContent2 = getElementByClassName('accordion-content-v2');
+gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.set(firstAccordionContent2, {
+  display: "block",
   height: "auto",
   autoAlpha: 1,
   duration: 0
 });
 
 // Main logic v1
-
 document.querySelectorAll('.accordion-menu-v1').forEach(function (accordionMenu) {
   accordionMenu.addEventListener('click', function (event) {
     var parent = this.parentElement.parentElement;
@@ -112,11 +122,16 @@ document.querySelectorAll('.accordion-menu-v1').forEach(function (accordionMenu)
 document.querySelectorAll('.accordion-menu-v2').forEach(function (accordionMenu) {
   accordionMenu.addEventListener('click', function (event) {
     var parent = this.parentElement.parentElement;
-
+    var imageBg = document.querySelector('.accordion-bg-dots');
+    var imageBgV2 = document.querySelector('.accordion-bg-dots-v2');
+    gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.set(imageBgV2, {
+      rotate: 0
+    });
     // if has class expanded don't allow animations etc. no need to duplicate step
     if (!parent.classList.contains('is-expanded')) {
       // const stepLeftContainer = getElementByClassName('accordion-left');
-      var accordionLeftContent = getElementByClassName('accordion-left');
+      var accordionLeftContent = getElementByClassName('accordion-right');
+      accordionLeftContent.innerHTML = '';
       gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger.matchMedia({
         "(min-width: 770px)": function minWidth770px() {
           // Clear the existing content
@@ -124,11 +139,20 @@ document.querySelectorAll('.accordion-menu-v2').forEach(function (accordionMenu)
           // Get the background image of the clicked accordion
           var stepBgImage = parent.querySelector('.accordion-media');
           if (stepBgImage) {
-            var clonedElement = stepBgImage.cloneNode(true);
+            var clonedElement = stepBgImage.cloneNode(false);
             clonedElement.classList.remove('md:hidden');
             accordionLeftContent.appendChild(clonedElement);
+            // getImage Position
+            var imageHeight = document.querySelector('.accordion-right').querySelector('.accordion-media');
+
+            //gsap.fromTo(imageHeight, 0.5, { autoAlpha: 0}, { autoAlpha: 1});
+            console.log(imageHeight.clientHeight);
+            //gsap.set(accordionLeftContent, {minHeight: imageHeight.clientHeight, duration: 0});
+            // gsap.fromTo(imageBg, {rotate: 0},{rotate: 360, duration: 2, ease: "power2.out"});
+            // gsap.fromTo(imageBgV2, {rotate: 0},{rotate:-45, duration: 1,  ease: "none"});
           }
         },
+
         "(max-width: 767px)": function maxWidth767px() {}
       });
 
@@ -162,7 +186,6 @@ document.querySelectorAll('.accordion-menu-v2').forEach(function (accordionMenu)
       // Get the current step and set it as a data attribute in accordion's parent
       var currentStep = Array.from(parent.parentElement.children).indexOf(parent) + 1;
       parent.parentElement.setAttribute('data-step', currentStep);
-      event.preventDefault();
     }
   });
 });

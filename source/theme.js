@@ -1,7 +1,9 @@
 // core version
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { CSSPlugin } from "gsap/CSSPlugin";
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(CSSPlugin);
 
 ScrollTrigger.defaults({
     markers: false
@@ -29,11 +31,13 @@ function setStyle(element, property, value) {
 }
 
 // Get first element
-const firstAccordionContent = getElementByClassName('accordion-content');
-gsap.set(firstAccordionContent, {height: "auto", autoAlpha: 1, duration: 0})
+const firstAccordionContent = getElementByClassName('accordion-content-v1');
+gsap.set(firstAccordionContent, {display: "block", height: "auto", autoAlpha: 1, duration: 0})
+const firstAccordionContent2 = getElementByClassName('accordion-content-v2');
+gsap.set(firstAccordionContent2, {display: "block", height: "auto", autoAlpha: 1, duration: 0})
+
 
 // Main logic v1
-
 document.querySelectorAll('.accordion-menu-v1').forEach((accordionMenu) => {
     accordionMenu.addEventListener('click', function(event) {
         const parent = this.parentElement.parentElement;
@@ -42,8 +46,6 @@ document.querySelectorAll('.accordion-menu-v1').forEach((accordionMenu) => {
         if (!parent.classList.contains('is-expanded')) {
             // const stepLeftContainer = getElementByClassName('accordion-left');
             const accordionLeftContent = getElementByClassName('accordion-left');
-
-
 
             ScrollTrigger.matchMedia({
 
@@ -104,14 +106,14 @@ document.querySelectorAll('.accordion-menu-v1').forEach((accordionMenu) => {
 document.querySelectorAll('.accordion-menu-v2').forEach((accordionMenu) => {
     accordionMenu.addEventListener('click', function(event) {
         const parent = this.parentElement.parentElement;
-
+        const imageBg = document.querySelector('.accordion-bg-dots');
+        const imageBgV2 = document.querySelector('.accordion-bg-dots-v2');
+        gsap.set(imageBgV2, {rotate: 0});
         // if has class expanded don't allow animations etc. no need to duplicate step
         if (!parent.classList.contains('is-expanded')) {
             // const stepLeftContainer = getElementByClassName('accordion-left');
-            const accordionLeftContent = getElementByClassName('accordion-left');
-
-
-
+            const accordionLeftContent = getElementByClassName('accordion-right');
+            accordionLeftContent.innerHTML = '';
             ScrollTrigger.matchMedia({
 
                 "(min-width: 770px)": function() {
@@ -121,9 +123,18 @@ document.querySelectorAll('.accordion-menu-v2').forEach((accordionMenu) => {
                     const stepBgImage = parent.querySelector('.accordion-media');
                     if ( stepBgImage ) {
 
-                        const clonedElement = stepBgImage.cloneNode(true);
+                        const clonedElement = stepBgImage.cloneNode(false);
                         clonedElement.classList.remove('md:hidden');
                         accordionLeftContent.appendChild(clonedElement);
+                        // getImage Position
+                        const imageHeight = document.querySelector('.accordion-right').querySelector('.accordion-media');
+
+
+                        //gsap.fromTo(imageHeight, 0.5, { autoAlpha: 0}, { autoAlpha: 1});
+                        console.log( imageHeight.clientHeight );
+                        //gsap.set(accordionLeftContent, {minHeight: imageHeight.clientHeight, duration: 0});
+                        // gsap.fromTo(imageBg, {rotate: 0},{rotate: 360, duration: 2, ease: "power2.out"});
+                        // gsap.fromTo(imageBgV2, {rotate: 0},{rotate:-45, duration: 1,  ease: "none"});
 
                     }
                 },
@@ -158,7 +169,6 @@ document.querySelectorAll('.accordion-menu-v2').forEach((accordionMenu) => {
             const currentStep = Array.from(parent.parentElement.children).indexOf(parent) + 1;
             parent.parentElement.setAttribute('data-step', currentStep);
 
-            event.preventDefault();
         }
     });
 });
