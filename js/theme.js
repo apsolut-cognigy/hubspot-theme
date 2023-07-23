@@ -96,6 +96,7 @@ document.querySelectorAll('.accordion-menu-v1').forEach(function (accordionMenu)
       // Slide toggle the clicked accordion-content and add the 'animateIn' class
       var accordionContent = parent.querySelector('.accordion-content');
       gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.set(accordionContent, {
+        height: 0,
         autoAlpha: 0
       });
       gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(accordionContent, {
@@ -139,14 +140,17 @@ document.querySelectorAll('.accordion-menu-v2').forEach(function (accordionMenu)
           // Get the background image of the clicked accordion
           var stepBgImage = parent.querySelector('.accordion-media');
           if (stepBgImage) {
-            var clonedElement = stepBgImage.cloneNode(false);
+            var clonedElement = stepBgImage.cloneNode(true);
             clonedElement.classList.remove('md:hidden');
             accordionLeftContent.appendChild(clonedElement);
             // getImage Position
             var imageHeight = document.querySelector('.accordion-right').querySelector('.accordion-media');
-
-            //gsap.fromTo(imageHeight, 0.5, { autoAlpha: 0}, { autoAlpha: 1});
-            console.log(imageHeight.clientHeight);
+            gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.fromTo(imageHeight, 0.5, {
+              autoAlpha: 0
+            }, {
+              autoAlpha: 1
+            });
+            // console.log( imageHeight.clientHeight );
             //gsap.set(accordionLeftContent, {minHeight: imageHeight.clientHeight, duration: 0});
             // gsap.fromTo(imageBg, {rotate: 0},{rotate: 360, duration: 2, ease: "power2.out"});
             // gsap.fromTo(imageBgV2, {rotate: 0},{rotate:-45, duration: 1,  ease: "none"});
@@ -170,6 +174,7 @@ document.querySelectorAll('.accordion-menu-v2').forEach(function (accordionMenu)
       // Slide toggle the clicked accordion-content and add the 'animateIn' class
       var accordionContent = parent.querySelector('.accordion-content');
       gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.set(accordionContent, {
+        height: 0,
         autoAlpha: 0
       });
       gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(accordionContent, {
@@ -189,6 +194,9 @@ document.querySelectorAll('.accordion-menu-v2').forEach(function (accordionMenu)
     }
   });
 });
+
+// I like your style - Cognigy
+console.log('%cI like your style - Cognigy Person! Checking my Console 💪', 'color: blue; background: black; font-size: 30px');
 
 /***/ }),
 

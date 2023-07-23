@@ -83,7 +83,7 @@ document.querySelectorAll('.accordion-menu-v1').forEach((accordionMenu) => {
 
             // Slide toggle the clicked accordion-content and add the 'animateIn' class
             const accordionContent = parent.querySelector('.accordion-content');
-            gsap.set(accordionContent, {autoAlpha: 0})
+            gsap.set(accordionContent, {height: 0, autoAlpha: 0})
             gsap.to(accordionContent, {height: "auto", autoAlpha: 1, duration: .35})
             accordionContent.style.display = 'block';
             accordionContent.classList.add('animateIn');
@@ -123,15 +123,14 @@ document.querySelectorAll('.accordion-menu-v2').forEach((accordionMenu) => {
                     const stepBgImage = parent.querySelector('.accordion-media');
                     if ( stepBgImage ) {
 
-                        const clonedElement = stepBgImage.cloneNode(false);
+                        const clonedElement = stepBgImage.cloneNode(true);
                         clonedElement.classList.remove('md:hidden');
                         accordionLeftContent.appendChild(clonedElement);
                         // getImage Position
                         const imageHeight = document.querySelector('.accordion-right').querySelector('.accordion-media');
 
-
-                        //gsap.fromTo(imageHeight, 0.5, { autoAlpha: 0}, { autoAlpha: 1});
-                        console.log( imageHeight.clientHeight );
+                        gsap.fromTo(imageHeight, 0.5, { autoAlpha: 0}, { autoAlpha: 1});
+                        // console.log( imageHeight.clientHeight );
                         //gsap.set(accordionLeftContent, {minHeight: imageHeight.clientHeight, duration: 0});
                         // gsap.fromTo(imageBg, {rotate: 0},{rotate: 360, duration: 2, ease: "power2.out"});
                         // gsap.fromTo(imageBgV2, {rotate: 0},{rotate:-45, duration: 1,  ease: "none"});
@@ -157,7 +156,7 @@ document.querySelectorAll('.accordion-menu-v2').forEach((accordionMenu) => {
 
             // Slide toggle the clicked accordion-content and add the 'animateIn' class
             const accordionContent = parent.querySelector('.accordion-content');
-            gsap.set(accordionContent, {autoAlpha: 0})
+            gsap.set(accordionContent, {height: 0, autoAlpha: 0})
             gsap.to(accordionContent, {height: "auto", autoAlpha: 1, duration: .35})
             accordionContent.style.display = 'block';
             accordionContent.classList.add('animateIn');
@@ -172,3 +171,6 @@ document.querySelectorAll('.accordion-menu-v2').forEach((accordionMenu) => {
         }
     });
 });
+
+// I like your style - Cognigy
+console.log('%cI like your style - Cognigy Person! Checking my Console 💪', 'color: blue; background: black; font-size: 30px');

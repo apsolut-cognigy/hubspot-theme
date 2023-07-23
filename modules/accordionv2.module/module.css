@@ -24,7 +24,7 @@
     content: "";
     position: absolute;
     left: 0;
-    top: 50%;
+    top: 0;
     transform: translate(-50%, -50%);
     max-width: 640px;
 }
@@ -76,7 +76,6 @@
     overflow: visible;
     padding: 60px;
     z-index: 2;
-    background: #ef6b51;
 }
 .cognigy-accordion-v2 .accordion-right:before {
     content: "";
