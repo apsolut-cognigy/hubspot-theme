@@ -1,15 +1,23 @@
 #### Quick theme with Tailwind and Two Modules 
 
 ### Modules
-* [Accordion v1](#accordion_v1)
-* [Accordion v2](#accordion_v2)
-* [Heading v1](#heading_v1)
+* [Heading v1](#heading-v1)
+* [Accordion v1](#accordion-v1)
+* [Accordion v2](#accordion-v2)
+
 
 - [x] User can edit Title, Text
     - [x] User can change background color
 - [x] User can add Accordion Items
     - [x] User can add images
     - [x] User can also add video (last option in accordion)
+
+#### Heading v1
+```html
+Heading module where user can pick heading size (H1, H2, H3..)
+and also background to be light or dark.
+```
+
 
 #### Accordion v1
 ```html
@@ -23,11 +31,7 @@ Different style (modern)
 ```
 
 
-#### Heading v1
-```html
-Heading module where user can pick heading size (H1, H2, H3..)
-and also background to be light or dark.
-```
+
 
 ###### Extras
 ```html
