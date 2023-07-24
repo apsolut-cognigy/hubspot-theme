@@ -11,7 +11,7 @@
 
     {% if item.media.purpose == 'video' %}
 
-    <div class="accordion-media " data-bg="{{ item.headshot.src }}">
+    <div class="accordion-media" data-bg="{{ item.headshot.src }}">
       <video preload autoplay loop muted preload="metadata" playsinline="" loop="" autoplay="" muted="">
         <source src="{{ item.media.file_field }}" type="video/mp4">
         <!-- Add more <source> elements for other video formats (WebM, Ogg, etc.) -->

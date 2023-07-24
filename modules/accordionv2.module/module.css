@@ -36,9 +36,12 @@
     flex-direction: row;
     margin-bottom: 20px;
     padding: 20px;
-    background: #F4F9FC;
+    background: #f7f8f9;
     border-radius: 16px;
     color: #171D29;
+}
+.cognigy-accordion-v2 .accordion-group.is-expanded {
+    background: #F4F9FC;
 }
 .cognigy-accordion-v2 .icon {
     width: 40px;
@@ -49,7 +52,7 @@
 }
 .cognigy-accordion-v2 .content .headingx  .hs_cos_wrapper_widget {
     color: #0B3694;
-    padding-top: 5px;
+    padding-top:0;
 }
 .cognigy-accordion-v2 .content .description .hs_cos_wrapper_widget {
     padding: 20px 0;

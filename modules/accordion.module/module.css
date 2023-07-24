@@ -35,7 +35,7 @@
     display: none;
 }
 .cognigy-accordion-v1 .content .headingx  .hs_cos_wrapper_widget {
-    padding-top: 5px;
+    padding-top: 0;
 }
 .cognigy-accordion-v1 .content .description .hs_cos_wrapper_widget {
     padding: 20px 0;

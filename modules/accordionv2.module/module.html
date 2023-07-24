@@ -26,7 +26,7 @@
             {% if item.media.purpose == 'video' %}
 
             <div class="accordion-media md:hidden" data-bg="{{ item.headshot.src }}">
-              <video preload autoplay loop muted preload="metadata" playsinline="" loop="" autoplay="" muted="">
+              <video preload autoplay loop muted preload="auto" playsinline="" loop="" autoplay="" muted="">
                 <source src="{{ item.media.file_field }}" type="video/mp4">
                 <!-- Add more <source> elements for other video formats (WebM, Ogg, etc.) -->
               </video>
@@ -82,7 +82,7 @@
         <img src="{{ item.headshot.src }}" alt="{{ item.headshot.alt }}" {{ loadingAttr }} class="step-image-desktop">
       </div>
       {% else %}
-      <div class="accordion-media" lazy="disabled"  data-bg="{{ get_asset_url('../../images/default-accordion.png') }}">
+      <div class="accordion-media" data-bg="{{ get_asset_url('../../images/default-accordion.png') }}">
         <img src="{{ get_asset_url('../../images/default-accordion.png') }}" alt="A default accordion image" />
       </div>
       {% endif %}
