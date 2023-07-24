@@ -54,6 +54,10 @@
     color: #0B3694;
     padding-top:0;
 }
+.cognigy-accordion-v2 .content h3.headingx {
+    font-size: 20px;
+    font-weight: 700;
+}
 .cognigy-accordion-v2 .content .description .hs_cos_wrapper_widget {
     padding: 20px 0;
 }
