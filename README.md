@@ -29,7 +29,13 @@ Heading module where user can pick heading size (H1, H2, H3..)
 and also background to be light or dark.
 ```
 
-
+###### Extras
+```html
+Created modules are also working in HubSpot CMS, so that user can edit content in HubSpot.
+My tailwind config file is included in this repo.
+I use my boilerplate to start TW projects
+<a href="https://github.com/apsolut-public/quick-html-tailwind-starter"> Quick HTML Tailwind Starter</a>
+```
 
 ## 🚀 Meta
 
