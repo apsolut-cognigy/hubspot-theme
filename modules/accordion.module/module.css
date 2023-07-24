@@ -34,7 +34,7 @@
 .cognigy-accordion-v1 .accordion-group:last-child:before {
     display: none;
 }
-.cognigy-accordion-v1 .content .heading  .hs_cos_wrapper_widget {
+.cognigy-accordion-v1 .content .headingx  .hs_cos_wrapper_widget {
     padding-top: 5px;
 }
 .cognigy-accordion-v1 .content .description .hs_cos_wrapper_widget {
@@ -81,6 +81,10 @@
 }
 .cognigy-accordion-v1 .accordion-right {
     padding-left: 20px;
+    padding-right: 20px;
+}
+.cognigy-accordion-v1 .accordion-right .headingx {
+    padding-right: 10px;
 }
 .cognigy-accordion-v1 .accordion-half {
     width: 55%;
@@ -93,6 +97,10 @@
 }
 @media (max-width: 769px) {
 
+    .cognigy-accordion-v1  {
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
     .cognigy-accordion-v1 .accordion-left {
         display: none;
     }
@@ -101,6 +109,7 @@
         width: 100%;
         flex-basis: 100%;
     }
+
     .cognigy-accordion-v1 .accordion-media {
         display: block;
     }

@@ -1,6 +1,8 @@
 .accordion-wrapper-v2 {
     position: relative;
     overflow: hidden;
+    padding-top: 108px;
+    padding-bottom: 0;
 }
 .cognigy-accordion-v2 {
     display: flex;
@@ -9,8 +11,8 @@
     max-width: 1146px;
     margin-inline: auto;
     position: relative;
-    padding-top: 112px;
-    padding-bottom: 112px;
+    padding-top: 40px;
+    padding-bottom: 128px;
 }
 .accordion-wrapper-v2 .accordion-bg-dots {
     content: "";
@@ -45,7 +47,7 @@
     margin-right: 10px;
     z-index: 2;
 }
-.cognigy-accordion-v2 .content .heading  .hs_cos_wrapper_widget {
+.cognigy-accordion-v2 .content .headingx  .hs_cos_wrapper_widget {
     color: #0B3694;
     padding-top: 5px;
 }
@@ -131,7 +133,14 @@
 
 
 @media (max-width: 769px) {
-
+    .accordion-wrapper-v2 {
+        padding-top: 80px;
+        padding-bottom: 0;
+    }
+    .cognigy-accordion-v2 {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
     .cognigy-accordion-v2 .accordion-right {
         display: none;
     }
